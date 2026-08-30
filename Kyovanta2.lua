@@ -1582,8 +1582,8 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 Corner(pillBg, 99)
 
                 -- knob (bolinha branca)
-                local knobSize = 13
-                local knobMargin = 2
+                local knobSize = 16
+                local knobMargin = 3
                 local knob = Frame(pillBg, {
                     AnchorPoint      = Vector2.new(0.5, 0.5),
                     Position         = state and UDim2.new(1, -(knobSize/2 + knobMargin), 0.5, 0) or UDim2.new(0, knobSize/2 + knobMargin, 0.5, 0),
@@ -1943,7 +1943,7 @@ knobGlow.Parent       = knob
                 -- track com padding lateral (8px cada lado) pra knob não sair pela borda
                 local trackBg = Frame(slFrame, {
                     Position             = UDim2.new(0,8,0,28),
-                    Size                 = UDim2.new(1,-16,0,8),
+                    Size                 = UDim2.new(1,-16,0,5),
                     BackgroundColor3     = Color3.fromRGB(50,50,50),
                     BackgroundTransparency = 0,
                     ZIndex               = 7,

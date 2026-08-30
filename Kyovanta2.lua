@@ -1431,9 +1431,9 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 Size           = UDim2.new(1,0,0,16),
                 Text           = string.upper(groupName or ""),
                 TextColor3     = C.low,
-                TextSize       = 9,
+                TextSize       = 16,
                 Font           = Enum.Font.GothamBold,
-                TextXAlignment = Enum.TextXAlignment.Left,
+                TextXAlignment = Enum.TextXAlignment.Center,
                 ZIndex         = 4,
                 LayoutOrder    = 0,
             })

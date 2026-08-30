@@ -1196,7 +1196,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
             TextColor3     = C.accent,
             TextSize       = 8,
             Font           = Enum.Font.GothamBold,
-            TextXAlignment = Enum.TextXAlignment.Left,
+            TextXAlignment = Enum.TextXAlignment.Center,
             ZIndex         = 3,
             LayoutOrder    = #sidebarScroll:GetChildren() + 1,
         })

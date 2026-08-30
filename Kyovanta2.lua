@@ -63,6 +63,7 @@ local UserInputService  = game:GetService("UserInputService")
 local Debris            = game:GetService("Debris")
 local RunService        = game:GetService("RunService")
 local HttpService       = game:GetService("HttpService")
+local interFont = Font.new("rbxassetid://12187365364") -- substitua pelo ID
 
 -- ─── tween helper ──────────────────────────────────────────────────────────
 local function tw(obj, props, t, style, dir)
@@ -134,10 +135,30 @@ local function Label(parent, props)
     local l = Instance.new("TextLabel")
     l.BackgroundTransparency = 1
     l.BorderSizePixel = 0
-    l.Font = Enum.Font.Inter
+    l.FontFace = interFont   -- <-- em vez de l.Font
     applyProps(l, props)
     l.Parent = parent
     return l
+end
+
+local function Label(parent, props)
+    local l = Instance.new("TextLabel")
+    l.BackgroundTransparency = 1
+    l.BorderSizePixel = 0
+    l.FontFace = interFont   -- <-- em vez de l.Font
+    applyProps(l, props)
+    l.Parent = parent
+    return l
+end
+
+local function Button(parent, props)
+    local b = Instance.new("TextButton")
+    b.AutoButtonColor = false
+    b.BorderSizePixel = 0
+    b.FontFace = interFont   -- <-- em vez de b.Font
+    applyProps(b, props)
+    b.Parent = parent
+    return b
 end
 
 local function Button(parent, props)
@@ -1582,7 +1603,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 Corner(pillBg, 99)
 
                 -- knob (bolinha branca)
-                local knobSize = 20
+                local knobSize = 13
                 local knobMargin = 3
                 local knob = Frame(pillBg, {
                     AnchorPoint      = Vector2.new(0.5, 0.5),

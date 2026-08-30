@@ -134,7 +134,7 @@ local function Label(parent, props)
     local l = Instance.new("TextLabel")
     l.BackgroundTransparency = 1
     l.BorderSizePixel = 0
-    l.Font = Enum.Font.FredokaOne
+    l.Font = Enum.Font.Inter
     applyProps(l, props)
     l.Parent = parent
     return l
@@ -144,7 +144,7 @@ local function Button(parent, props)
     local b = Instance.new("TextButton")
     b.AutoButtonColor = false
     b.BorderSizePixel = 0
-    b.Font = Enum.Font.FredokaOne
+    b.Font = Enum.Font.Inter
     applyProps(b, props)
     b.Parent = parent
     return b
@@ -1582,7 +1582,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 Corner(pillBg, 99)
 
                 -- knob (bolinha branca)
-                local knobSize = 16
+                local knobSize = 20
                 local knobMargin = 3
                 local knob = Frame(pillBg, {
                     AnchorPoint      = Vector2.new(0.5, 0.5),

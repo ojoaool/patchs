@@ -1707,14 +1707,14 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 Corner(knob, 99)
 
                 -- Sombra elevada na bolinha do toggle
-local knobShadow = Instance.new("UIShadow")
-knobShadow.Color        = Color3.fromRGB(0, 0, 0)          -- preto
-knobShadow.BlurRadius   = UDim.new(0, 6)                  -- desfoque suave
-knobShadow.Spread       = UDim2.fromOffset(2, 4)          -- espalhamento
-knobShadow.Offset       = UDim2.fromOffset(0, 2)          -- deslocamento para baixo
-knobShadow.Transparency = 0.5                             -- 50% opaco
-knobShadow.ZIndex       = 1                               -- fica atrás da bolinha
-knobShadow.Parent       = knob
+local knobGlow = Instance.new("UIShadow")
+knobGlow.Color        = Color3.fromRGB(255, 255, 255)  -- ou a cor que você quiser (ex: C.accent)
+knobGlow.BlurRadius   = UDim.new(0, 24)               -- blur alto
+knobGlow.Spread       = UDim2.fromOffset(6, 8)        -- espalhamento
+knobGlow.Offset       = UDim2.fromOffset(0, 0)        -- sem deslocamento (centralizado)
+knobGlow.Transparency = 0.2                           -- bem sutil
+knobGlow.ZIndex       = -1                            -- fica atrás da bolinha
+knobGlow.Parent       = knob
 
                 local o = {}
                 local function flip()

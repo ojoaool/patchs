@@ -1706,6 +1706,15 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 })
                 Corner(knob, 99)
 
+                local trackGlow = Instance.new("UIShadow")
+trackGlow.Color        = Color3.fromRGB(255, 255, 255)  -- ou C.accent
+trackGlow.BlurRadius   = UDim.new(0, 20)
+trackGlow.Spread       = UDim2.fromOffset(4, 6)
+trackGlow.Offset       = UDim2.fromOffset(0, 0)
+trackGlow.Transparency = 0.3
+trackGlow.ZIndex       = -1
+trackGlow.Parent       = pillBg
+
                 -- Sombra elevada na bolinha do toggle
 local knobGlow = Instance.new("UIShadow")
 knobGlow.Color        = Color3.fromRGB(255, 255, 255)  -- ou a cor que você quiser (ex: C.accent)

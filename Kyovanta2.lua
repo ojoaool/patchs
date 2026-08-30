@@ -506,7 +506,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
             Size           = UDim2.new(1,0,1,0),
             Text           = string.upper((title or "V"):sub(1,1)),
             TextColor3     = C.hi,
-            TextSize       = 20,
+            TextSize       = 16,
             Font           = Enum.Font.GothamBold,
             TextXAlignment = Enum.TextXAlignment.Center,
             ZIndex         = 4,
@@ -1200,7 +1200,6 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
             ZIndex         = 3,
             LayoutOrder    = #sidebarScroll:GetChildren() + 1,
         })
-        Padding(lbl, 0, 0, 14, 0)
     end
 
     -- ═════════════════════════════════════════════════════════════════════
@@ -1552,7 +1551,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                         Size           = UDim2.new(0.55,0,1,0),
                         Text           = lbl or "",
                         TextColor3     = C.hi,
-                        TextSize       = 11,
+                        TextSize       = 16,
                         Font           = Enum.Font.Gotham,
                         TextXAlignment = Enum.TextXAlignment.Left,
                         ZIndex         = 6,

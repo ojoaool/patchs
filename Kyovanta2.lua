@@ -206,7 +206,7 @@ local C = {
     low      = Color3.fromRGB(102, 102, 102),  -- #666666 texto inativo
     dim      = Color3.fromRGB(68,  68,  68),   -- #444444 descrição/placeholder
     border   = Color3.fromRGB(42,  42,  42),   -- #2a2a2a bordas sutis
-    accent   = Color3.fromRGB(4,   96,  255),  -- azul mar accent
+    accent   = Color3.fromRGB(220,   220,  220),  -- branco accent
     accentBg = Color3.fromRGB(224,   224,  224),  -- branco claro hover
     onBg     = Color3.fromRGB(137,137,137),  -- Branco toggle ON
     offBg    = Color3.fromRGB(30,  30,  30),   -- #262626 toggle OFF
@@ -552,7 +552,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         Name                 = "pill",
         Position             = UDim2.new(0,0,0,118),
         Size                 = UDim2.new(0,4,0,14),
-        BackgroundColor3     = Color3.fromRGB(4,  96, 255),   -- azul mar vivo
+        BackgroundColor3     = C.accent,   -- branco
         BackgroundTransparency = 0,
         ZIndex               = 6,
     })
@@ -1318,7 +1318,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
             tw(pillGlow, {Position = UDim2.new(0, 0, 0, targetY), Size = UDim2.new(0, 4, 0, 14)}, 0.28, Enum.EasingStyle.Quart, Enum.EasingDirection.Out)
 
             -- fundo roxo sólido no tab ativo (sem stroke, com gradiente e scale up)
-            tw(tabBtn, {BackgroundColor3 = Color3.fromRGB(4, 60, 160), BackgroundTransparency = 0.15, Size = UDim2.new(0, 38, 0, 38)}, 0.18)
+            tw(tabBtn, {BackgroundColor3 = Color3.fromRGB(60, 60, 60), BackgroundTransparency = 0.15, Size = UDim2.new(0, 38, 0, 38)}, 0.18)
 
             -- corner mais suave no ativo
             local activeCorner = tabBtn:FindFirstChildWhichIsA("UICorner")

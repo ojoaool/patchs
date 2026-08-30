@@ -1330,9 +1330,9 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
             if existingGrad then existingGrad:Destroy() end
             local activeGrad = Instance.new("UIGradient")
             activeGrad.Color = ColorSequence.new({
-                ColorSequenceKeypoint.new(0,   Color3.fromRGB(20, 80, 200)),
-                ColorSequenceKeypoint.new(1,   Color3.fromRGB(4,  50, 140)),
-            })
+    ColorSequenceKeypoint.new(0,   Color3.fromRGB(70, 70, 70)),   -- cinza médio
+    ColorSequenceKeypoint.new(1,   Color3.fromRGB(30, 30, 30)),   -- cinza escuro
+})
             activeGrad.Rotation = 90
             activeGrad.Parent   = tabBtn
 
@@ -1966,11 +1966,11 @@ knobGlow.Parent       = knob
                 local knob = Frame(fill, {
                     AnchorPoint      = Vector2.new(1, 0.5),
                     Position         = UDim2.new(1, 0, 0.5, 0),
-                    Size             = UDim2.new(0, 10, 0, 14),
+                    Size             = UDim2.new(0, 16, 0, 16),
                     BackgroundColor3 = Color3.fromRGB(255,255,255),
                     ZIndex           = 9,
                 })
-                Corner(knob, 5)
+                Corner(knob, 8)
 
                 local slBtn = Button(trackBg, {
                     Size                 = UDim2.new(1,0,0,20),

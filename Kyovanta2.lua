@@ -486,7 +486,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         logoGlowShadow.Offset       = UDim2.fromOffset(0, 0)
         logoGlowShadow.Transparency = 0.05
         logoGlowShadow.ZIndex       = -1
-        logoGlowShadow.Parent       = logoGlowDot,
+        logoGlowShadow.Parent       = logoGlowDot
 
         local logoImg = Image(logoBlock, {
             AnchorPoint       = Vector2.new(0.5,0.5),
@@ -575,7 +575,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
     pillShadow.Offset       = UDim2.fromOffset(0, 0)
     pillShadow.Transparency = 0
     pillShadow.ZIndex       = -1
-    pillShadow.Parent       = pillGlow,
+    pillShadow.Parent       = pillGlow
 
     -- ── state ─────────────────────────────────────────────────────────────
     local sections     = {}
@@ -837,7 +837,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         mGlowShadow.Offset       = UDim2.fromOffset(0, 0)
         mGlowShadow.Transparency = 0.05
         mGlowShadow.ZIndex       = -1
-        mGlowShadow.Parent       = mGlowDot,
+        mGlowShadow.Parent       = mGlowDot
 
         Image(mCircle, {
             AnchorPoint          = Vector2.new(0.5, 0.5),
@@ -2144,7 +2144,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                             Position       = UDim2.new(0, 0, 0, 0),
                             Size           = UDim2.new(0, 16, 1, 0),
                             Text           = isSel and "✓" or "",
-                            TextColor3     = C.accent
+                            TextColor3     = C.accent,
                             TextSize       = 10,
                             Font           = Enum.Font.GothamBold,
                             TextXAlignment = Enum.TextXAlignment.Center,
@@ -2419,7 +2419,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                             Position       = UDim2.new(0, 0, 0, 0),
                             Size           = UDim2.new(0, 16, 1, 0),
                             Text           = on and "✓" or "",
-                            TextColor3     = C.accent
+                            TextColor3     = C.accent,
                             TextSize       = 10,
                             Font           = Enum.Font.GothamBold,
                             TextXAlignment = Enum.TextXAlignment.Center,
@@ -2697,7 +2697,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 local highlight = Frame(bg2, {
                     Position             = UDim2.new(0,0,1,-2),
                     Size                 = UDim2.new(1,0,0,4),
-                    BackgroundColor3     = C.accent
+                    BackgroundColor3     = C.accent,
                     BackgroundTransparency = 1,
                     ZIndex               = 9,
                 })
@@ -2865,7 +2865,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                     Size           = UDim2.new(1,0,0,18),
                     Position       = UDim2.new(0,0,0,4),
                     Text           = string.upper(name or ""),
-                    TextColor3     = C.accent
+                    TextColor3     = C.accent,
                     TextSize       = 9,
                     Font           = Enum.Font.GothamBold,
                     TextXAlignment = Enum.TextXAlignment.Center,
@@ -2876,7 +2876,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 local line = Frame(secContainer, {
                     Position         = UDim2.new(0,0,1,-2),
                     Size             = UDim2.new(1,0,0,1),
-                    BackgroundColor3 = C.accent
+                    BackgroundColor3 = C.accent,
                     BackgroundTransparency = 0,
                     ZIndex           = 6,
                 })

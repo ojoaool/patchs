@@ -474,13 +474,13 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
             AnchorPoint          = Vector2.new(0.5, 0.5),
             Position             = UDim2.new(0.5, 0, 0.5, 0),
             Size                 = UDim2.new(0, 8, 0, 8),
-            BackgroundColor3     = C.accent,
+            BackgroundColor3     = C.accent
             BackgroundTransparency = 0,
             ZIndex               = 3,
         })
         Corner(logoGlowDot, 99)
         local logoGlowShadow = Instance.new("UIShadow")
-        logoGlowShadow.Color        = C.accent,
+        logoGlowShadow.Color        = C.accent
         logoGlowShadow.BlurRadius   = UDim.new(0, 24)
         logoGlowShadow.Spread       = UDim2.fromOffset(6, 8)
         logoGlowShadow.Offset       = UDim2.fromOffset(0, 0)
@@ -563,13 +563,13 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         Name                 = "pillGlow",
         Position             = UDim2.new(0,0,0,118),
         Size                 = UDim2.new(0,4,0,14),
-        BackgroundColor3     = C.accent,
+        BackgroundColor3     = C.accent
         BackgroundTransparency = 1,
         ZIndex               = 5,
     })
     Corner(pillGlow, 6)
     local pillShadow = Instance.new("UIShadow")
-    pillShadow.Color        = C.accent,
+    pillShadow.Color        = C.accent
     pillShadow.BlurRadius   = UDim.new(0, 30)
     pillShadow.Spread       = UDim2.fromOffset(8, 10)
     pillShadow.Offset       = UDim2.fromOffset(0, 0)
@@ -825,13 +825,13 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
             AnchorPoint          = Vector2.new(0.5, 0.5),
             Position             = UDim2.new(0.5, 0, 0.5, 0),
             Size                 = UDim2.new(0, 8, 0, 8),
-            BackgroundColor3     = C.accent,
+            BackgroundColor3     = C.accent
             BackgroundTransparency = 0,
             ZIndex               = 64,
         })
         Corner(mGlowDot, 99)
         local mGlowShadow = Instance.new("UIShadow")
-        mGlowShadow.Color        = C.accent,
+        mGlowShadow.Color        = C.accent
         mGlowShadow.BlurRadius   = UDim.new(0, 24)
         mGlowShadow.Spread       = UDim2.fromOffset(6, 8)
         mGlowShadow.Offset       = UDim2.fromOffset(0, 0)
@@ -1192,7 +1192,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         local lbl = Label(sidebarScroll, {
             Size           = UDim2.new(1,0,0,22),
             Text           = string.upper(name or ""),
-            TextColor3     = C.accent,
+            TextColor3     = C.accent
             TextSize       = 8,
             Font           = Enum.Font.GothamBold,
             TextXAlignment = Enum.TextXAlignment.Left,
@@ -1719,7 +1719,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 local highlight = Frame(inputBg, {
                     Position             = UDim2.new(0,0,1,-2),
                     Size                 = UDim2.new(1,0,0,2),
-                    BackgroundColor3     = C.accent,
+                    BackgroundColor3     = C.accent
                     BackgroundTransparency = 1,
                     ZIndex               = 9,
                 })
@@ -1945,7 +1945,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 local p0 = (val-min)/(max-min)
                 local fill = Frame(trackBg, {
                     Size             = UDim2.new(p0, 0, 1, 0),
-                    BackgroundColor3 = C.accent,
+                    BackgroundColor3 = C.accent
                     BackgroundTransparency = 0,
                     ZIndex           = 8,
                 })
@@ -2144,7 +2144,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                             Position       = UDim2.new(0, 0, 0, 0),
                             Size           = UDim2.new(0, 16, 1, 0),
                             Text           = isSel and "✓" or "",
-                            TextColor3     = C.accent,
+                            TextColor3     = C.accent
                             TextSize       = 10,
                             Font           = Enum.Font.GothamBold,
                             TextXAlignment = Enum.TextXAlignment.Center,
@@ -2419,7 +2419,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                             Position       = UDim2.new(0, 0, 0, 0),
                             Size           = UDim2.new(0, 16, 1, 0),
                             Text           = on and "✓" or "",
-                            TextColor3     = C.accent,
+                            TextColor3     = C.accent
                             TextSize       = 10,
                             Font           = Enum.Font.GothamBold,
                             TextXAlignment = Enum.TextXAlignment.Center,
@@ -2697,7 +2697,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 local highlight = Frame(bg2, {
                     Position             = UDim2.new(0,0,1,-2),
                     Size                 = UDim2.new(1,0,0,4),
-                    BackgroundColor3     = C.accent,
+                    BackgroundColor3     = C.accent
                     BackgroundTransparency = 1,
                     ZIndex               = 9,
                 })
@@ -2865,7 +2865,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                     Size           = UDim2.new(1,0,0,18),
                     Position       = UDim2.new(0,0,0,4),
                     Text           = string.upper(name or ""),
-                    TextColor3     = C.accent,
+                    TextColor3     = C.accent
                     TextSize       = 9,
                     Font           = Enum.Font.GothamBold,
                     TextXAlignment = Enum.TextXAlignment.Center,
@@ -2876,7 +2876,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 local line = Frame(secContainer, {
                     Position         = UDim2.new(0,0,1,-2),
                     Size             = UDim2.new(1,0,0,1),
-                    BackgroundColor3 = C.accent,
+                    BackgroundColor3 = C.accent
                     BackgroundTransparency = 0,
                     ZIndex           = 6,
                 })

@@ -134,7 +134,7 @@ local function Label(parent, props)
     local l = Instance.new("TextLabel")
     l.BackgroundTransparency = 1
     l.BorderSizePixel = 0
-    l.Font = Enum.Font.Gotham
+    l.Font = Enum.Font.FredokaOne
     applyProps(l, props)
     l.Parent = parent
     return l
@@ -144,7 +144,7 @@ local function Button(parent, props)
     local b = Instance.new("TextButton")
     b.AutoButtonColor = false
     b.BorderSizePixel = 0
-    b.Font = Enum.Font.Gotham
+    b.Font = Enum.Font.FredokaOne
     applyProps(b, props)
     b.Parent = parent
     return b
@@ -208,8 +208,8 @@ local C = {
     border   = Color3.fromRGB(42,  42,  42),   -- #2a2a2a bordas sutis
     accent   = Color3.fromRGB(4,   96,  255),  -- azul mar accent
     accentBg = Color3.fromRGB(2,   60,  180),  -- azul mar escuro hover
-    onBg     = Color3.fromRGB(4,   96,  255),  -- azul mar toggle ON
-    offBg    = Color3.fromRGB(38,  38,  38),   -- #262626 toggle OFF
+    onBg     = Color3.fromRGB(255,   255,  255),  -- Branco toggle ON
+    offBg    = Color3.fromRGB(30,  30,  30),   -- #262626 toggle OFF
     knob     = Color3.fromRGB(15,  15,  15),   -- #0f0f0f
     toastBg  = Color3.fromRGB(10,  10,  10),   -- #0a0a0a
     success  = Color3.fromRGB(76,  175, 80),   -- #4caf50 verde
@@ -521,32 +521,6 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         ZIndex               = 4,
     })
 
-    -- ── dots macOS empilhados verticalmente abaixo do logo ───────────────
-    local dotColors = {
-        Color3.fromRGB(255, 95,  86),
-        Color3.fromRGB(255, 189, 46),
-        Color3.fromRGB(39,  201, 63),
-    }
-    for idx, col in ipairs(dotColors) do
-        local d = Frame(sidebar, {
-            AnchorPoint      = Vector2.new(0.5,0),
-            Position         = UDim2.new(0.5,0,0, 65 + (idx-1)*14),
-            Size             = UDim2.new(0,7,0,7),
-            BackgroundColor3 = col,
-            BackgroundTransparency = 0.2,
-            ZIndex           = 5,
-        })
-        Corner(d, 4)
-    end
-
-    -- separador abaixo dos dots
-    Frame(sidebar, {
-        Position             = UDim2.new(0,8,0,110),
-        Size                 = UDim2.new(1,-16,0,1),
-        BackgroundColor3     = C.border,
-        BackgroundTransparency = 0,
-        ZIndex               = 4,
-    })
 
     -- ── scroll dos tab buttons ────────────────────────────────────────────
     local sidebarScroll = Instance.new("ScrollingFrame")
@@ -2620,7 +2594,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 icon.Position             = UDim2.new(1, -14, 0.5, 0)
                 icon.Size                 = UDim2.new(0, 18, 0, 18)
                 icon.BackgroundTransparency = 1
-                icon.Image                = "rbxassetid://101493069014530"
+                icon.Image                = "rbxassetid://16513309462"
                 icon.ZIndex               = 8
                 icon.Parent               = btn
 

@@ -135,7 +135,7 @@ local function Label(parent, props)
     local l = Instance.new("TextLabel")
     l.BackgroundTransparency = 1
     l.BorderSizePixel = 0
-    l.Font = Enum.Font.Inter
+    l.Font = Enum.Font.Ubuntu
     applyProps(l, props)
     l.Parent = parent
     return l
@@ -145,7 +145,7 @@ local function Button(parent, props)
     local b = Instance.new("TextButton")
     b.AutoButtonColor = false
     b.BorderSizePixel = 0
-    b.Font = Enum.Font.Inter
+    b.Font = Enum.Font.Ubuntu
     applyProps(b, props)
     b.Parent = parent
     return b

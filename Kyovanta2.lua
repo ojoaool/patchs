@@ -207,8 +207,8 @@ local C = {
     dim      = Color3.fromRGB(68,  68,  68),   -- #444444 descrição/placeholder
     border   = Color3.fromRGB(42,  42,  42),   -- #2a2a2a bordas sutis
     accent   = Color3.fromRGB(4,   96,  255),  -- azul mar accent
-    accentBg = Color3.fromRGB(2,   60,  180),  -- azul mar escuro hover
-    onBg     = Color3.fromRGB(255,   255,  255),  -- Branco toggle ON
+    accentBg = Color3.fromRGB(224,   224,  224),  -- branco claro hover
+    onBg     = Color3.fromRGB(224,   224,  224),  -- Branco toggle ON
     offBg    = Color3.fromRGB(30,  30,  30),   -- #262626 toggle OFF
     knob     = Color3.fromRGB(15,  15,  15),   -- #0f0f0f
     toastBg  = Color3.fromRGB(10,  10,  10),   -- #0a0a0a
@@ -1933,7 +1933,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 -- track com padding lateral (8px cada lado) pra knob não sair pela borda
                 local trackBg = Frame(slFrame, {
                     Position             = UDim2.new(0,8,0,28),
-                    Size                 = UDim2.new(1,-16,0,4),
+                    Size                 = UDim2.new(1,-16,0,8),
                     BackgroundColor3     = Color3.fromRGB(50,50,50),
                     BackgroundTransparency = 0,
                     ZIndex               = 7,
@@ -1955,7 +1955,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 local knob = Frame(fill, {
                     AnchorPoint      = Vector2.new(1, 0.5),
                     Position         = UDim2.new(1, 0, 0.5, 0),
-                    Size             = UDim2.new(0, 10, 0, 10),
+                    Size             = UDim2.new(0, 10, 0, 14),
                     BackgroundColor3 = Color3.fromRGB(255,255,255),
                     ZIndex           = 9,
                 })

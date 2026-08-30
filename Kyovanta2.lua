@@ -135,30 +135,10 @@ local function Label(parent, props)
     local l = Instance.new("TextLabel")
     l.BackgroundTransparency = 1
     l.BorderSizePixel = 0
-    l.FontFace = interFont   -- <-- em vez de l.Font
+    l.Font = Enum.Font.Inter
     applyProps(l, props)
     l.Parent = parent
     return l
-end
-
-local function Label(parent, props)
-    local l = Instance.new("TextLabel")
-    l.BackgroundTransparency = 1
-    l.BorderSizePixel = 0
-    l.FontFace = interFont   -- <-- em vez de l.Font
-    applyProps(l, props)
-    l.Parent = parent
-    return l
-end
-
-local function Button(parent, props)
-    local b = Instance.new("TextButton")
-    b.AutoButtonColor = false
-    b.BorderSizePixel = 0
-    b.FontFace = interFont   -- <-- em vez de b.Font
-    applyProps(b, props)
-    b.Parent = parent
-    return b
 end
 
 local function Button(parent, props)
@@ -2174,7 +2154,7 @@ knobGlow.Parent       = knob
                         Label(ob, {
                             Position       = UDim2.new(0, 0, 0, 0),
                             Size           = UDim2.new(0, 16, 1, 0),
-                            Text           = isSel and "✓" or "",
+                            Text           = "",
                             TextColor3     = C.accent,
                             TextSize       = 10,
                             Font           = Enum.Font.GothamBold,
@@ -2449,7 +2429,7 @@ knobGlow.Parent       = knob
                         local tickLbl = Label(ob, {
                             Position       = UDim2.new(0, 0, 0, 0),
                             Size           = UDim2.new(0, 16, 1, 0),
-                            Text           = on and "✓" or "",
+                            Text           = "",
                             TextColor3     = C.accent,
                             TextSize       = 10,
                             Font           = Enum.Font.GothamBold,
@@ -2485,7 +2465,7 @@ knobGlow.Parent       = knob
                             local s = sel[opt]
                             tw(ob,     {BackgroundTransparency = s and 0.5 or 1}, 0.12)
                             tw(optLbl, {TextColor3 = s and C.hi or C.mid},        0.12)
-                            tickLbl.Text = s and "✓" or ""
+                            tickLbl.Text = ""
                             optLbl.Font  = s and Enum.Font.GothamMedium or Enum.Font.Gotham
                             valLbl.Text  = labelTxt()
                             if o then o.Value = sel end

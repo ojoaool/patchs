@@ -474,7 +474,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
             AnchorPoint          = Vector2.new(0.5, 0.5),
             Position             = UDim2.new(0.5, 0, 0.5, 0),
             Size                 = UDim2.new(0, 8, 0, 8),
-            BackgroundColor3     = C.accent
+            BackgroundColor3     = C.accent,
             BackgroundTransparency = 0,
             ZIndex               = 3,
         })
@@ -486,7 +486,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         logoGlowShadow.Offset       = UDim2.fromOffset(0, 0)
         logoGlowShadow.Transparency = 0.05
         logoGlowShadow.ZIndex       = -1
-        logoGlowShadow.Parent       = logoGlowDot
+        logoGlowShadow.Parent       = logoGlowDot,
 
         local logoImg = Image(logoBlock, {
             AnchorPoint       = Vector2.new(0.5,0.5),
@@ -563,7 +563,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         Name                 = "pillGlow",
         Position             = UDim2.new(0,0,0,118),
         Size                 = UDim2.new(0,4,0,14),
-        BackgroundColor3     = C.accent
+        BackgroundColor3     = C.accent,
         BackgroundTransparency = 1,
         ZIndex               = 5,
     })
@@ -575,7 +575,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
     pillShadow.Offset       = UDim2.fromOffset(0, 0)
     pillShadow.Transparency = 0
     pillShadow.ZIndex       = -1
-    pillShadow.Parent       = pillGlow
+    pillShadow.Parent       = pillGlow,
 
     -- ── state ─────────────────────────────────────────────────────────────
     local sections     = {}
@@ -825,7 +825,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
             AnchorPoint          = Vector2.new(0.5, 0.5),
             Position             = UDim2.new(0.5, 0, 0.5, 0),
             Size                 = UDim2.new(0, 8, 0, 8),
-            BackgroundColor3     = C.accent
+            BackgroundColor3     = C.accent,
             BackgroundTransparency = 0,
             ZIndex               = 64,
         })
@@ -837,7 +837,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         mGlowShadow.Offset       = UDim2.fromOffset(0, 0)
         mGlowShadow.Transparency = 0.05
         mGlowShadow.ZIndex       = -1
-        mGlowShadow.Parent       = mGlowDot
+        mGlowShadow.Parent       = mGlowDot,
 
         Image(mCircle, {
             AnchorPoint          = Vector2.new(0.5, 0.5),
@@ -1192,7 +1192,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
         local lbl = Label(sidebarScroll, {
             Size           = UDim2.new(1,0,0,22),
             Text           = string.upper(name or ""),
-            TextColor3     = C.accent
+            TextColor3     = C.accent,
             TextSize       = 8,
             Font           = Enum.Font.GothamBold,
             TextXAlignment = Enum.TextXAlignment.Left,
@@ -1719,7 +1719,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 local highlight = Frame(inputBg, {
                     Position             = UDim2.new(0,0,1,-2),
                     Size                 = UDim2.new(1,0,0,2),
-                    BackgroundColor3     = C.accent
+                    BackgroundColor3     = C.accent,
                     BackgroundTransparency = 1,
                     ZIndex               = 9,
                 })
@@ -1945,7 +1945,7 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 local p0 = (val-min)/(max-min)
                 local fill = Frame(trackBg, {
                     Size             = UDim2.new(p0, 0, 1, 0),
-                    BackgroundColor3 = C.accent
+                    BackgroundColor3 = C.accent,
                     BackgroundTransparency = 0,
                     ZIndex           = 8,
                 })

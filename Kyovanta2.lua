@@ -1581,6 +1581,15 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                 })
                 Corner(pillBg, 99)
 
+                local trackGlow = Instance.new("UIShadow")
+trackGlow.Color        = C.accent
+trackGlow.BlurRadius   = UDim.new(0, 20)
+trackGlow.Spread       = UDim2.fromOffset(4, 6)
+trackGlow.Offset       = UDim2.fromOffset(0, 0)
+trackGlow.Transparency = 0.3
+trackGlow.ZIndex       = -1
+trackGlow.Parent       = pillBg
+
                 -- knob (bolinha branca)
                 local knobSize = 13
                 local knobMargin = 3
@@ -1592,6 +1601,17 @@ function lib:init(title, subtitle, logoAsset, visibleKey, deletePrevious, logoSi
                     ZIndex           = 8,
                 })
                 Corner(knob, 99)
+
+                -- Glow na bolinha (igual à logo)
+-- Glow FORTE e INTENSO na bolinha
+local knobGlow = Instance.new("UIShadow")
+knobGlow.Color        = Color3.fromRGB(255, 255, 255)  -- Branco puro
+knobGlow.BlurRadius   = UDim.new(0, 32)               -- Borrão alto para suavizar
+knobGlow.Spread       = UDim2.fromOffset(14, 18)      -- Espalhamento GRANDE
+knobGlow.Offset       = UDim2.fromOffset(0, 0)
+knobGlow.Transparency = 0                             -- 0 = brilho máximo (opaco)
+knobGlow.ZIndex       = -1
+knobGlow.Parent       = knob
 
                 local o = {}
                 local function flip()

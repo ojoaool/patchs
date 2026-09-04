@@ -1965,6 +1965,15 @@ do
             Parent = Container;
         });
 
+		local ToggleGlow = Library:Create('UIShadow', {
+    Color = Library.AccentColor;        -- cor do brilho (segue o tema)
+    Transparency = 0.6;                -- começa bem transparente
+    BlurRadius = UDim.new(0, 8);       -- desfoque suave
+    Offset = UDim2.new(0, 0, 0, 0);    -- centralizado
+    Spread = UDim2.new(0, 2, 0, 2);    -- expande um pouco
+    Parent = ToggleOuter;              -- pai é o próprio ToggleOuter
+})
+
         Library:ApplyCorner(ToggleOuter, 3);
 
         Library:AddToRegistry(ToggleOuter, {
@@ -2028,6 +2037,17 @@ do
         function Toggle:Display()
             ToggleInner.BackgroundColor3 = Toggle.Value and Library.AccentColor or Library.MainColor;
             ToggleInner.BorderColor3 = Toggle.Value and Library.AccentColorDark or Library.OutlineColor;
+
+			    -- Atualiza o brilho (glow)
+    if Toggle.Value then
+        ToggleGlow.Transparency = 0.1;          -- bem visível
+        ToggleGlow.BlurRadius = UDim.new(0, 12);-- mais desfoque = brilho mais suave
+        ToggleGlow.Spread = UDim2.new(0, 4, 0, 4); -- mais espalhado
+    else
+        ToggleGlow.Transparency = 0.8;          -- quase invisível
+        ToggleGlow.BlurRadius = UDim.new(0, 6);
+        ToggleGlow.Spread = UDim2.new(0, 1, 0, 1);
+    end
 
             Library.RegistryMap[ToggleInner].Properties.BackgroundColor3 = Toggle.Value and 'AccentColor' or 'MainColor';
             Library.RegistryMap[ToggleInner].Properties.BorderColor3 = Toggle.Value and 'AccentColorDark' or 'OutlineColor';
